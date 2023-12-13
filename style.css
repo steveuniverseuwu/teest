@@ -1,0 +1,189 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden; 
+    background-color: #111;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+section {
+    position: relative;
+    text-align: center;
+}
+
+.section {
+    text-align: center;
+    color: white;
+}
+
+.section img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.circle-link {
+    position: absolute;
+    top: 100px; /* Adjust the top position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 2; /* Make sure it's above the background image */
+}
+
+.circle {
+    display: inline-block;
+    width: 300px; /* Adjust the width and height as needed */
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; /* Ensure the image inside the circle also has a circular shape */
+}
+.welcome-text {
+    font-family: 'Lobster', cursive; /* Choose your desired cursive font family */
+    font-size: 32px; /* Adjust the font size as needed */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+.welcome-text {
+    font-size: 32px;
+    color: #fff;
+    font-family: 'Lobster', cursive;
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none; /* Remove the underline */
+}
+@keyframes reveal-text {
+    0% {
+        width: 0;
+    }
+    20% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.welcome-text::before {
+    content: attr(data-text);
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: reveal-text 2s ease-out forwards; /* Adjust the duration and easing as needed */
+    animation-delay: 5s;
+}
+.content{
+    font-family: 'Lobster', cursive; /* Choose your desired cursive font family */
+    font-size: 100px; /* Adjust the font size as needed */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+.content{
+    font-size: 100px;
+    color: #fff;
+    font-family: 'Lobster', cursive;
+    position: absolute;
+    bottom: -600px;
+    right: 40%;
+    transform: translateX(-50%);
+    text-decoration: none; /* Remove the underline */
+}
+.hehe-image {
+    position: absolute;
+    top: -10%; /* Adjust the top position as needed */
+    right: -200px; /* Adjust the right position as needed */
+    transform: translateY(-50%);
+    z-index: 1; /* Ensure the image is on top of the background */
+}
+
+.hehe-image img {
+    width: 500px; /* Adjust the width as needed for a larger image */
+    height: auto;
+    border-radius: 5px; /* Optional: Add border radius for a rounded look */
+    filter: blur(5px); /* Adjust the blur radius as needed */
+}
+@keyframes shooting-stars {
+    from {
+        transform: translateX(0);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(100vw);
+        opacity: 1;
+    }
+}
+
+.shooting-star {
+    position: absolute;
+    width: 4px; /* Increase the size for better visibility */
+    height: 4px; /* Increase the size for better visibility */
+    background-color: white;
+    animation: shooting-stars linear infinite;
+}
+
+.shooting-star:nth-child(1) {
+    top: 10;
+    left: -1000; /* Adjusted the starting position to the left */
+    animation-duration: 2s;
+}
+
+.shooting-star:nth-child(2) {
+    top: 20%;
+    left: -1000; /* Adjusted the starting position to the left */
+    animation-duration: 3s;
+}
+
+.shooting-star:nth-child(3) {
+    top: 30%;
+    left: -1000; /* Adjusted the starting position to the left */
+    animation-duration: 4s;
+}
+
+.shooting-star:nth-child(4) {
+    top: 40%;
+    left: -1000; /* Adjusted the starting position to the left */
+    animation-duration: 5s;
+}
+
+.shooting-star:nth-child(5) {
+    top: 50%;
+    left: -1000; /* Adjusted the starting position to the left */
+    animation-duration: 6s;
+}
